@@ -28,7 +28,7 @@ object MyServer extends App {
   // given Config contains the erb value for the rpc service
 
   val contactFieldsService = ContactExtendedFieldsServiceV4WithCallScope
-         .stub(Clients.grpcChannel("config.grpcProxy"), 
+         .stub(Clients.grpcChannel(config.grpcProxy), 
                _.withAuthority("com.wixpress.contacts.contacts-fields-app")
          )
  
